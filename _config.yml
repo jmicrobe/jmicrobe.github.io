@@ -1,31 +1,31 @@
-# top level stuff you probably don't need to touch
-highlighter: pygments
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
-permalink: /:title.html
-paginate: 5
-gems: [jekyll-paginate]
-port: 3000
-safe: true
+# Dependencies
+markdown:         kramdown
+highlighter:      rogue
+gems:
+  - jekyll-paginate
+  - redcarpet
+  - jekyll-gist
+  - pygments.rb
 
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
 
-# edit here to achieve your personal greatness
-url: http://username.github.io/
-baseurl: /sustain/
-title: Chris Turner
-author: Chris Turner
-description: Personal blog and resume
-avatar: profile.png
-email: yourname@email.com
-github: biomadeira/sustain # username
-twitter: username
-linkedin: username
-stackoverflow: username   #e.g: users/2735833/proton1h1
-#Comment out if you don't want disqus 
-disqus: username
-google_analytics: UA-69391421-1
+# Setup
+title:            jmicrobe
+tagline:          'Jessica Hardwicke'
+description:      'Microbial ecologist, bioinformatician, mad scientist'
+url:              http://jmicrobe.me
+baseurl:          /
 
+author:
+  name:           'Jessica Hardwicke'
+  url:            http://jmicrobe.me
 
-# needed for travis-ci build
-exclude: [vendor]
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
