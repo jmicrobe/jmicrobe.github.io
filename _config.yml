@@ -1,3 +1,32 @@
-name: Hank Quinlan, Horrible Cop
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+# Dependencies
+markdown:         kramdown
+highlighter:      rogue
+gems:
+  - jekyll-paginate
+  - redcarpet
+  - jekyll-gist
+  - pygments.rb
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+title:            jmicrobe
+tagline:          'Jessica Hardwicke'
+description:      'Microbial ecologist, bioinformatician, mad scientist'
+url:              http://jmicrobe.me
+baseurl:          /
+
+author:
+  name:           'Jessica Hardwicke'
+  url:            http://jmicrobe.me
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+>>>>>>> newtheme
