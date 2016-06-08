@@ -6,6 +6,7 @@ gems:
   - redcarpet
   - jekyll-gist
   - pygments.rb
+  - jekyll-feed
 
 # Permalinks
 permalink:        pretty
