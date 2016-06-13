@@ -6,6 +6,8 @@
 .jekyll-metadata
 Gemfile.lock
 
+_drafts/
+
 # webstorm
 .idea/
 
