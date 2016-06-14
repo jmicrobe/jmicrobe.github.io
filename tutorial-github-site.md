@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Getting started on github: Building a static site using Jekyll
+layout: unlisted-page
+title: "Getting started on github: Building a static site using Jekyll"
 ---
 
 This tutorial will introduce you to some basic concepts of git, Github pages, and Jekyll in order to make a simple personal website.
@@ -42,7 +42,7 @@ Github allows users to host their own website using a special github pages repo.
 ## Fork the sample site
 In your browser, go to the [sample site repo](https://github.com/jmicrobe/getmicah) and fork it to your own account. From your account, click on the repo and go to its settings. Change the repo name to yourusername.github.io. This will tell Github to set it to your personal page. To check that this worked, go to the web address yourusername.github.io. It should display the sample site.
 
-#####At this point you have some options. Since the site is already built, you can edit any of the files directly on Github in your browser. Skip to [The Jekyll file structure](#) if you plan to work this way.
+**At this point you have some options. Since the site is already built, you can edit any of the files directly on Github in your browser. Skip to [The Jekyll file structure](#) if you plan to work this way.**
 
 ## Clone the sample site
 If you're [3l33t](http://www.urbandictionary.com/define.php?term=3l33t) of course you're going to want to edit your website locally in a text editor, build your site with Jekyll and push changes to Github. This is great practice for m@d command line skillz. I digress.
@@ -80,7 +80,7 @@ This document is in yml, or YAML format. Notice that it represents the links loc
 
 ### \_includes/header.html
 This document is in html format. \_includes are for re-usable elements, like a header in the case or a footer. You'll notice other files like index.html have a line of code near the top that looks like:
-`{% include header.html %}`
+{% raw  %}`{% include header.html %}`{% endraw %}
 Which tells Jekyll to include that header file.
 
 Another thing to note about this file is that it contains some special tools:
@@ -91,13 +91,13 @@ References the website's CSS document located at `/assets/css/main.scss`. If you
 
 Back in `header.html` you'll also notice a syntax already hinted at:
 
-`{% for item in site.data.navigation %}`
+{% raw  %}`{% for item in site.data.navigation %}`{% endraw %}
 
 This syntax is known as **Liquid**, Jekyll's templating language. Have a look [here](https://jekyllrb.com/docs/templates/) if you want to learn more about Liquid. In this case it's simple to see that the above code sets a for loop, that reads the `_data/navigation.yml` file and creates the following:
 
-`<a href="{{ item.url }}">{{ item.title }}</a>`
+{% raw  %}`<a href="{{ item.url }}">{{ item.title }}</a>`{% endraw  %}
 
-Which is a little bit Liquid, and a little html. Essentially this looks at `navigation.yml` and creates links for each of the entries. Since this is the header file, any page that uses `{% include header.html %}` will have these links at the top.
+Which is a little bit Liquid, and a little html. Essentially this looks at `navigation.yml` and creates links for each of the entries. Since this is the header file, any page that uses {% raw  %}`{% include header.html %}`{% endraw  %} will have these links at the top.
 
 ### \_layouts/
 
