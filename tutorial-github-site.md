@@ -1,7 +1,7 @@
 ---
 layout: unlisted-page
-title: Getting started on github: Building a static site using Jekyll
 ---
+# Getting started on github: Building a static site using Jekyll
 This tutorial will introduce you to some basic concepts of git, Github pages, and Jekyll in order to make a simple personal website.
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
