@@ -2,7 +2,20 @@
 
 This tutorial will introduce you to some basic concepts of git, Github pages, and Jekyll in order to make a simple personal website.
 
-#
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Dependencies](#)
+- [What's a repo?](#)
+- [Overview of git & Github](#)
+- [Github pages & Jekyll](#)
+    - [Fork the sample site](#)	
+    - [Clone the sample site](#)
+    - [The Jekyll file structure](#)
+    - [If you are working locally:](#)
+    - [If you are working from Github online:](#)
+- [Moving on with other themes](#)
+- [Wrapping up](#)
+- [Links](#)
 
 ## Dependencies
 + [Git](https://git-scm.com/)
