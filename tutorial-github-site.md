@@ -42,7 +42,7 @@ Github allows users to host their own website using a special github pages repo.
 ## Fork the sample site
 In your browser, go to the [sample site repo](https://github.com/jmicrobe/getmicah) and fork it to your own account. From your account, click on the repo and go to its settings. Change the repo name to yourusername.github.io. This will tell Github to set it to your personal page. To check that this worked, go to the web address yourusername.github.io. It should display the sample site.
 
-**At this point you have some options. Since the site is already built, you can edit any of the files directly on Github in your browser. Skip to [The Jekyll file structure](#) if you plan to work this way.**
+**At this point you have some options. Since the site is already built, you can edit any of the files directly on Github in your browser. Skip to** [The Jekyll file structure](#) **if you plan to work this way.**
 
 ## Clone the sample site
 If you're [3l33t](http://www.urbandictionary.com/define.php?term=3l33t) of course you're going to want to edit your website locally in a text editor, build your site with Jekyll and push changes to Github. This is great practice for m@d command line skillz. I digress.
