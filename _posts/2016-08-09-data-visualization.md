@@ -1,6 +1,6 @@
 ---
 layout: post
-title: On data presentation & visualization
+title: on data presentation & visualization
 ---
 
 I recently attended a workshop by [Edward Tufte](https://www.edwardtufte.com/tufte/index), a very well-known statistician, author, and data scientist. If you haven't seen his books they are quite inspiring and frankly gorgeous to look at and explore. The workshop was focused on data presentation and visualization. I'd like to share some of my musings on the subject, from a bioinformatics perspective...

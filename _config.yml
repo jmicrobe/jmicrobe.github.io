@@ -24,6 +24,10 @@ author:
   url:            http://jmicrobe.me
 
 paginate:         5
+collections:
+  tutorials:
+    output: true
+
 
 # Custom vars
 version:          2.1.0

@@ -1,0 +1,14 @@
+---
+layout: page
+title: posts
+---
+{% include head.html %}
+<div class="posts">
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
