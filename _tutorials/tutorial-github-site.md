@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Getting started on github: building a static site using Jekyll"
+layout: page
+title: Getting started on github: building a static site using Jekyll
 ---
 
 This tutorial will introduce you to some basic concepts of git, Github pages, and Jekyll in order to make a simple personal website.
