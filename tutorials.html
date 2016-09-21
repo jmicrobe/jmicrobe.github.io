@@ -6,9 +6,9 @@ title: tutorials
 
 <div class="posts">
     <ul>
-        {% for post in site.tutorials %}
+        {% for page in site.tutorials %}
         <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ page.url }}">{{ page.title }}</a>
         </li>
         {% endfor %}
     </ul>
