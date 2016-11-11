@@ -58,6 +58,8 @@ html {
   }
 }
 
+
+
 body {
   color: #515151;
   background-color: #fff;
@@ -239,6 +241,57 @@ img {
   padding:15px !important;
 }
 
+/* Image gallery for portfolio page */
+
+div.img {
+    border: 1px solid transparent;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+  object-fit: scale-down;
+  object-position: center; /* Center the image within the element */
+  height: auto;
+  width: 100%;
+}
+
+div.desc {
+    padding: 8px;
+    text-align: center;
+    font-size: 75%;    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 50%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* Tables */
 table {
