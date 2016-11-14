@@ -4,51 +4,19 @@ title: portfolio
 ---
 {% include head.html %}
 
-<p>Below are a selection of case studies exhibiting my work related to bioinformatics.
-Each page describes some background, the methodology implemented, and relevant results.</p>
+<p>
+  Below are some links to selected bioinformatics projects that I have worked on. Each
+  page presents the project as a case study.
+</p>
 
-<div class="responsive">
-  <div class="img">
-    <a href="/_portfolio/intro16s.md">
-      <img src="/public/images_portfolio/abundance_stacked_barplot.png" alt="16S Profiling workshop">
-    </a>
-    <div class="desc">Intro to Bioinformatics: 16S rRNA Microbiome Profiling
+{% assign sorted_portfolio = site.portfolio | sort: "weight" %}
+{% for page in sorted_portfolio %}
+  <div class="responsive">
+    <div class="img">
+      <a href="{{ page.url }}">
+        <img src="{{ page.image_path }}" alt="{{ page.title}}">
+      </a>
+      <div class="desc">{{ page.title }}</div>
     </div>
   </div>
-</div>
-
-
-<div class="responsive">
-  <div class="img">
-    <a href="/_portfolio/armo16s.md">
-      <img src="/public/images_portfolio/armo_weighteduni.png" alt="16S Profiling workshop" >
-    </a>
-    <div class="desc">Bacterial Community Response to Land Use Change in the Amazon
-</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="img">
-    <a href="/_portfolio/gacustats.md">
-      <img src="/public/images_portfolio/clusters.png" alt="16S Profiling workshop" height="400">
-    </a>
-    <div class="desc">Examining gnobiotic effects in different populations of three-spined stickleback
-</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="img">
-    <a href="/_portfolio/extremophiles.md">
-      <img src="/public/images_portfolio/finaltree_forpaper.png" alt="16S Profiling workshop" height="400">
-    </a>
-    <div class="desc">Novel extremophiles: cladogram construction and whole-genome comparison
-</div>
-  </div>
-</div>
-
-<div class="clearfix"></div>
-
-</body>
-</html>
+{% endfor %}
