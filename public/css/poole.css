@@ -254,14 +254,14 @@ div.img:hover {
 div.img img {
   object-fit: scale-down;
   object-position: center; /* Center the image within the element */
-  height: auto;
+  height: 200px;
   width: 100%;
 }
 
 div.desc {
     padding: 8px;
     text-align: center;
-    font-size: 75%;    
+    font-size: 75%;
 }
 
 * {
