@@ -237,8 +237,9 @@ img {
 }
 
 .photo {
-  border-radius:3px !important;
-  padding:15px !important;
+  border-radius: 3px;
+  margin: 0 0 1rem;
+  padding: 10px;
 }
 
 /* Image gallery for portfolio page */

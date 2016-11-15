@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "Intro to Bioinformatics: 16S rRNA Microbiome Profiling"
+title: "intro to bioinformatics: 16S rRNA microbiome profiling"
 image_path: /public/images_portfolio/abundance_stacked_barplot.png
 weight: 1
 ---
