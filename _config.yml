@@ -27,6 +27,8 @@ paginate:         5
 collections:
   tutorials:
     output: true
+  portfolio:
+    output: true
 
 
 # Custom vars
