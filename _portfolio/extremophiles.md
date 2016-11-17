@@ -16,6 +16,7 @@ Constructing the 16S rRNA phylogenetic tree was an interesting experience for me
 ## Methods
 
 This tree was generated through *several* steps:
+
 + ARB was used to locate both similar as well as more "rooted" organisms (using the SILVA database)
 + 16S rRNA sequences of these organisms were gathered from the NCBI Database
 + RAxML was used to construct the newick-formatted tree
