@@ -7,7 +7,7 @@ This is the second part of my write-up on what it was like organizing and partic
 
 Where were we? At the end of the first night things were winding down - our competent yeast cultures and CRISPR bacteria were warming up, the 3D printer was raging on, and I was exhausted. I pitched my tent and went to bed.
 
-Guests slowly started streaming in the following morning, and I helped get our DIY coffee station up and running. Saturday was when the magic happened. Groups started to dig in and bring together their hardware and software ideas. I helped design some 3D printed medals on the fly, and another science hacker (who I later found out was a quilter!) helped sew lanyards to hold them.
+Guests slowly started streaming in the following morning, and I helped get our DIY coffee station up and running. Saturday was when the magic happened. Groups started to dig in and bring together their hardware and software ideas. I was taught how to design some 3D printed medals on the fly, and another science hacker (who I later found out was a quilter!) helped sew lanyards to hold them.
 
 ### Here's where I'm going to tell you about the project I worked on, and how it failed.
 
@@ -21,11 +21,13 @@ I'm still a bit new to bioinformatics, but from my experience that day was very 
 
 Anyways the day went on and in between bouts of yelling at my computer screen I walked around to observe and help out other projects. I especially enjoyed being a guinea pig in Jean & Marlene's project to build a temperature-sensing glove for Reynaud's syndrome. I stuck my hand in a freezer for 30 minutes FOR SCIENCE!
 
+<center>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="ro" dir="ltr">Sensor prototype for Raynaud&#39;s disease monitoring. <a href="https://twitter.com/hashtag/pdxscience?src=hash">#pdxscience</a> <a href="https://twitter.com/science_hackPDX">@science_hackPDX</a> <a href="https://twitter.com/hashtag/openscience?src=hash">#openscience</a> <a href="https://t.co/ALbl84Oa15">pic.twitter.com/ALbl84Oa15</a></p>&mdash; Robin Champieux (@rchampieux) <a href="https://twitter.com/rchampieux/status/784937645805678592">October 9, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 Other fun things included Max showing folks how to develop black & white photographs with vitamin C and coffee, a pipette-ejecting contest, a Hack Oregon confetti cannon, an LED lamp that projects a rainbow double helix and even pumpkins that light up LEDs when you touch them. **It was freaking amazing**.
 
 ### And now for a bit of reflection
 
-I learned so much from Science Hack Day - about my community & local scientists, about the logistics of organizing such an event, and a bit about my own capabilities when I scoot out from my comfort zone! One thing I hope to see at the next Science Hack Day is more prep and even infrastructure geared toward data science with large data sets. Some of the Portland organizers are already pushing for this - and recently hosted an [Open Data Day](http://opendataday.org/) complete with tutorials on metadata and web scraping to accompany the event. We are also already in the planning stages for Science Hack Day Portland 2017, and are working towards more smaller events leading up to it. 
+I learned so much from Science Hack Day - about my community & local scientists, about the logistics of organizing such an event, and a lot more about cloud computing. One thing I hope to see at the next Science Hack Day is more prep and even infrastructure geared toward data science with large data sets. Some of the Portland organizers are already pushing for this - and recently hosted an [Open Data Day](http://opendataday.org/) complete with tutorials on metadata and web scraping to accompany the event. We are also already in the planning stages for Science Hack Day Portland 2017, and are working towards more smaller events leading up to it.
