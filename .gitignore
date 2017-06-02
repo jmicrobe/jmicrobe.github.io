@@ -9,6 +9,8 @@ Gemfile.lock
 
 _drafts/
 
+.sass-cache
+
 # webstorm
 .idea/
 
