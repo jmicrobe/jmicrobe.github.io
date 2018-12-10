@@ -1,16 +1,18 @@
 # from http://jekyllrb.com/docs/continuous-integration/
 language: ruby
+cache: bundler
 rvm:
 - 2.1
 - 2.2
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
 install: gem install jekyll rdiscount pygments.rb #html-proofer
-script: jekyll build #&& htmlproof ./_site --disable-external --only-4xx --check-html --check-favicon
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination 
 # branch whitelist, only for GitHub Pages
 branches:
   only:
-  - gh-pages     # test the gh-pages branch
+  - releases
 
 env:
   global:
@@ -18,9 +20,11 @@ env:
 
 deploy:
   provider: pages
+  local-dir: ./site
+  target-branch: master
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
-    branch: master
+    branch: releases
 
