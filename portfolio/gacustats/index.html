@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      examining gnobiotic effects in different populations of three-spined stickleback &middot; jmicrobe
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <script src="https://use.fontawesome.com/b4fd5cd984.js"></script>
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <center><img src="/public/wbunny.png" style="width: 45%;"></center>
+        <a href="/">
+          jmicrobe
+        </a>
+      </h1>
+      <p class="lead">Microbial ecologist, bioinformatician, mad scientist</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">about me</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/cv/">curriculum vitae</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/portfolio/">portfolio</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/posts/">posts</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tutorials/">tutorials</a>
+          
+        
+      
+        
+      
+      <p><center>
+        <a href="https://github.com/jmicrobe"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hardwickejessica"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jessica_microbe"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:jessica@jmicrobe.me"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </p></center>
+    </nav>
+    <p><center><a href="https://github.com/poole/hyde"><i>Powered by Hyde</i></a></center></p>
+    <p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">examining gnobiotic effects in different populations of three-spined stickleback</h1>
+  <h2 id="objective">Objective</h2>
+
+<p>Using a gnobiotic model of the three-spined stickleback fish, compare the effects
+of host population and their microbiota with the following factors, all at 14
+days post-fertilization:</p>
+
+<ul>
+  <li>Survival</li>
+  <li>Sex of individuals</li>
+  <li>Triglyceride concentration of host (whole body)</li>
+  <li>Transcript abundance from host intestine</li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<p>All data was originally collected by the lab of Dr. William Cresko at the University of
+Oregon and was provided as a final project for a graduate course in advanced biological
+statistics. Two wild populations of three-spined stickleback were used (referred to as
+RS and BT) and both were bred to be germ-free (no microbiota). Each population contained
+two experimental groups: one remained germ-free, one where microbiota naturally
+present in facility food and water were introduced.</p>
+
+<ul>
+  <li>RS: germ-free</li>
+  <li>RS: conventional</li>
+  <li>BT: germ-free</li>
+  <li>BT: conventional</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<p>All data was processed in R, mostly using the package Vegan. These files can be provided
+upon request.</p>
+
+<h2 id="results">Results</h2>
+
+<p><img src="/public/images_portfolio/gacu_mossaic.png" alt="Mossaic plot comparing distribution of survival measures" width="300" /></p>
+
+<p>The above mossaic plot demonstrates that the <strong>most significant factor in survival was the microbiota</strong>, and
+not the original fish population. Fish with the “conventional” microbiota had lower overall survival rates than those with no microbiota at all.</p>
+
+<p><img src="/public/images_portfolio/gacu_sex.png" alt="Mossaic plot comparing distribution of survival measures" width="300" /></p>
+
+<p>The above mossaic plot illustrates that <strong>sex is not significantly influenced by the population or the microbiota treatment</strong>.</p>
+
+<p><img src="/public/images_portfolio/gacu_lipids.png" alt="Interaction plot of population and microbiota treatment on lipid concentration" width="400" /></p>
+
+<p>Results of a 2x2 factorial ANOVA are shown in the figure above, which highlights the interactions occurring between populations and microbiota treatments. Most notably, <strong>differential expression of TAGs was most significant across populations, and less so across microbiota treatments</strong>.</p>
+
+<p><img src="/public/images_portfolio/clusters.png" alt="Ordination plots of NMDS data for gene expression levels. (A) Clustered by population, (B) clustered by microbiota, (C) clustered by sex." width="100%" /></p>
+
+<p>The figure above contains ordination plots containing the first two scaled dissimilarity values, including a comparison of different cluster analyses. This data shows a <strong>strong differentiation between populations</strong>, and slight trends for microbiota and sex.</p>
+
+<p><img src="/public/images_portfolio/gacu_heatmap.png" alt="Heat map displaying the top 10 differentially-expressed genes in the data set. Clusters are based on similarity, and influence measures are displayed at the top." width="100%" /></p>
+
+<p>In order to further visualize differential gene expression, a heatmap was generated on a subset of ten genes most differentially expressed across samples. The figure above illustrates how these expression levels cluster with sex, population, and microbiota groups of the individuals.</p>
+
+<h2 id="future">Future</h2>
+
+<p>Since this data was provided for use in a biological statistics course, no further study is planned on my part. Feedback on my submission (which included analysis scripts as well as a formal write-up) was very positive. I did reflect in my conclusion that the low survivorship of the “conventional” treatment fish could have been related to potentially pathogenic microbes introduced in the food and water, but without samples from the tank water included in the data set that hypothesis can’t be confirmed.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

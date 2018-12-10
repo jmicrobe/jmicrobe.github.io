@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Getting started on github: building a static site using Jekyll &middot; jmicrobe
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <script src="https://use.fontawesome.com/b4fd5cd984.js"></script>
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <center><img src="/public/wbunny.png" style="width: 45%;"></center>
+        <a href="/">
+          jmicrobe
+        </a>
+      </h1>
+      <p class="lead">Microbial ecologist, bioinformatician, mad scientist</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">about me</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/cv/">curriculum vitae</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/portfolio/">portfolio</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/posts/">posts</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tutorials/">tutorials</a>
+          
+        
+      
+        
+      
+      <p><center>
+        <a href="https://github.com/jmicrobe"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hardwickejessica"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jessica_microbe"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:jessica@jmicrobe.me"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </p></center>
+    </nav>
+    <p><center><a href="https://github.com/poole/hyde"><i>Powered by Hyde</i></a></center></p>
+    <p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Getting started on github: building a static site using Jekyll</h1>
+  <p>This tutorial will introduce you to some basic concepts of git, Github pages, and Jekyll in order to make a simple personal website.</p>
+
+<ul>
+  <li><a href="#dependencies">Dependencies</a></li>
+  <li><a href="#whats-a-repo">What’s a repo?</a></li>
+  <li><a href="#overview-of-git-and-github">Overview of git and Github</a></li>
+  <li><a href="#github-pages-and-jekyll">Github pages and Jekyll</a>
+    <ul>
+      <li><a href="#fork-the-sample-site">Fork the sample site</a></li>
+      <li><a href="#clone-the-sample-site">Clone the sample site</a></li>
+      <li><a href="#the-jekyll-file-structure">The Jekyll file structure</a></li>
+      <li><a href="#if-you-are-working-locally">If you are working locally</a></li>
+      <li><a href="#if-you-are-working-from-github">If you are working from Github</a></li>
+    </ul>
+  </li>
+  <li><a href="#other-themes">Other themes</a></li>
+  <li><a href="#wrapping-up">Wrapping up</a></li>
+  <li><a href="#links">Links</a></li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+  <li><a href="https://git-scm.com/">Git</a></li>
+  <li><a href="https://github.com/">Github</a> account, I suggest unlocking a <a href="https://education.github.com/pack">student developer pack</a></li>
+  <li><a href="https://jekyllrb.com/docs/installation/">Jekyll</a></li>
+  <li>Your favorite text editor (I use <a href="https://atom.io/">atom</a>)</li>
+</ul>
+
+<h2 id="whats-a-repo">What’s a repo?</h2>
+<p>With git &amp; Github a repo (repository) is a folder that represents a project and all of the files and subdirectories involved. With using Github pages, a repo can also host the files to your website. Have a look at the repo we’ll be cloning today, which includes a simple, starter site: <strong><a href="https://github.com/jmicrobe/getmicah">https://github.com/jmicrobe/getmicah</a></strong></p>
+
+<h2 id="overview-of-git--github">Overview of git &amp; Github</h2>
+<p>Git is a version control system commonly used for (but not limited to) software development. It’s a powerful tool that can track changes to a project, and allows for non-linear workflows. Git is fast and comes installed on many unix-based systems.</p>
+
+<p>While git is initialized locally, you can push your projects to remote websites like Github. Github is great for many reasons, namely that it can manage multiple collaborators on a single project, and it’s great for building your online coding portfolio and presence. A great way to get started with Github is to build a Github page using Jekyll.</p>
+
+<h2 id="github-pages--jekyll">Github pages &amp; Jekyll</h2>
+<p>Github allows users to host their own website using a special github pages repo. In this case it contains all of the files to build the user’s website. Each user is allowed one Github pages site, and unlimited project pages (not included in this tutorial). This repo must be named yourusername.github.io, and the website lives at that same address.</p>
+
+<p><strong>Jekyll</strong> essentially builds your website based on a specific directory structure. Jekyll generates a <strong>static site</strong>, which is in contrast to a dynamic website. Static sites are great for simple, personal webpages that aren’t intended to be interactive (though there is flexibility with that). Jekyll is baked-in to github pages. In fact, you can launch a Jekyll personal site on github without installing Jekyll locally. In this case the downside is you can’t build, test, and debug your site before pushing it online.</p>
+
+<h2 id="fork-the-sample-site">Fork the sample site</h2>
+<p>In your browser, go to the <a href="https://github.com/jmicrobe/getmicah">sample site repo</a> and fork it to your own account. From your account, click on the repo and go to its settings. Change the repo name to yourusername.github.io. This will tell Github to set it to your personal page. To check that this worked, go to the web address yourusername.github.io. It should display the sample site.</p>
+
+<p><strong>At this point you have some options. Since the site is already built, you can edit any of the files directly on Github in your browser. Skip to</strong> <a href="#">The Jekyll file structure</a> <strong>if you plan to work this way.</strong></p>
+
+<h2 id="clone-the-sample-site">Clone the sample site</h2>
+<p>In terminal pick a top directory to place your website folder:</p>
+
+<p><code class="highlighter-rouge">$ cd your/preferred/directory</code></p>
+
+<p>Now clone the sample site repo here as a new folder. The address to clone from can be copied from the repo page, under “Clone or download”</p>
+
+<p><code class="highlighter-rouge">$ git clone https://github.com/yourusername/yourusername.github.io.git</code></p>
+
+<p><em>Note: if you have problems here you may not have git installed, or you may have to use an SSH address and/or generate a SSH key</em></p>
+
+<p>I like to sanity check and see that the folder copied here with <code class="highlighter-rouge">ls</code>, then move in to it:</p>
+
+<p><code class="highlighter-rouge">cd yourusername.github.io</code></p>
+
+<p>If you <code class="highlighter-rouge">ls</code> again you should see your website directory structure! Since everything is all here, we should be able to build and preview this sample site. If you have properly installed Jekyll type in:
+<code class="highlighter-rouge">jekyll serve</code></p>
+
+<p>You should get an output that ends with something like this:</p>
+
+<p><code class="highlighter-rouge">Server address: http://127.0.0.1:4000/</code></p>
+
+<p><code class="highlighter-rouge">Server running... press ctrl-c to stop.</code></p>
+
+<p>Copy and paste that server address into your browser to preview your website. This is how you’ll preview and debug your website build with Jekyll prior to pushing your site to Github.</p>
+
+<h2 id="the-jekyll-file-structure">The Jekyll file structure</h2>
+<p>Jekyll builds your site based on the contents within a specific site structure. They explain this structure best <a href="https://jekyllrb.com/docs/structure/">on their website</a>, but we’ll cover a few specific elements that you may want to edit:</p>
+
+<h3 id="_datanavigationyml">_data/navigation.yml</h3>
+<p>This document is in yml, or YAML format. Notice that it represents the links located on the top navbar of the website. Feel free to edit or add links to this document, following the same format.</p>
+
+<h3 id="_includesheaderhtml">_includes/header.html</h3>
+<p>This document is in html format. _includes are for re-usable elements, like a header in the case or a footer. You’ll notice other files like index.html have a line of code near the top that looks like:
+<code class="highlighter-rouge">{% include header.html %}</code>
+Which tells Jekyll to include that header file.</p>
+
+<p>Another thing to note about this file is that it contains some special tools:</p>
+
+<p><code class="highlighter-rouge">&lt;div class="blog"&gt;</code></p>
+
+<p>References the website’s CSS document located at <code class="highlighter-rouge">/assets/css/main.scss</code>. If you aren’t familiar with CSS it’s a way of separating code from content on your website. Have a look at <code class="highlighter-rouge">main.scss</code> and find the entry for <code class="highlighter-rouge">blog</code>. You can see that this element sets a few font-related settings.</p>
+
+<p>Back in <code class="highlighter-rouge">header.html</code> you’ll also notice a syntax already hinted at:</p>
+
+<p><code class="highlighter-rouge">{% for item in site.data.navigation %}</code></p>
+
+<p>This syntax is known as <strong>Liquid</strong>, Jekyll’s templating language. Have a look <a href="https://jekyllrb.com/docs/templates/">here</a> if you want to learn more about Liquid. In this case it’s simple to see that the above code sets a for loop, that reads the <code class="highlighter-rouge">_data/navigation.yml</code> file and creates the following:</p>
+
+<p><code class="highlighter-rouge">&lt;a href="{{ item.url }}"&gt;{{ item.title }}&lt;/a&gt;</code></p>
+
+<p>Which is a little bit Liquid, and a little html. Essentially this looks at <code class="highlighter-rouge">navigation.yml</code> and creates links for each of the entries. Since this is the header file, any page that uses <code class="highlighter-rouge">{% include header.html %}</code> will have these links at the top.</p>
+
+<h3 id="_layouts">_layouts/</h3>
+
+<p>These are templates that are used to wrap a page on the website. If you’re sticking with the sample theme you shouldn’t have to modify these files, but you’ll notice that <code class="highlighter-rouge">default.html</code> is used in the other two layouts <code class="highlighter-rouge">about.html</code> and <code class="highlighter-rouge">posts.html</code>. <code class="highlighter-rouge">default.html</code> includes a few bits of metadata and control code under <code class="highlighter-rouge">&lt;head&gt;</code>. Additionally, you’ll notice more of the Liquid syntax in all three of the layout files. This helps control how content is displayed. If you want to modify the format of your “about” page, or your blog posts, try editing these files.</p>
+
+<h3 id="_sass">_sass/</h3>
+<p>Sass is basically a fancier version of CSS. The files in this directory are similar to <code class="highlighter-rouge">/assets/css/main.scss</code> in that they set some of the visual formatting for content. I’m not (yet) a CSS/sass expert so I typically leave these alone.</p>
+
+<h3 id="assets">assets/</h3>
+<p>We already looked at <code class="highlighter-rouge">/assets/css/main.scss</code> but the assets folder also contains <code class="highlighter-rouge">img</code>, which is home to a file called <code class="highlighter-rouge">favicon.ico</code>. This is the little image that is displayed for your website at the top of a browser window. You can replace it with another .ico formatted image if you’d like. There are several free galleries online, but also generator tools that can convert things like .jpg or .png images into a favicon. Just make sure your new image has the same title.</p>
+
+<p>Additionally, if you’d like to add a photo to your site - say on your “about me” page, you can add that image to the <code class="highlighter-rouge">/assets/img/</code> directory (and then use html or other code to have it display on the page you want). Since this directory doesn’t start with an underscore, like <code class="highlighter-rouge">_sass</code> or <code class="highlighter-rouge">_layouts</code> Jekyll won’t have a fit trying to build your website if you have extraneous stuff in here.</p>
+
+<h3 id="gitignore">.gitignore</h3>
+<p>This file is how you can tell git to ignore certain files/directories. Notice in this file that <code class="highlighter-rouge">_site</code> and <code class="highlighter-rouge">_drafts</code> are ignored. This means git won’t track changes in these directories, and when you push the directory to github these directories are excluded from showing up in your repo. We ignore the <code class="highlighter-rouge">_site</code> directory because it contains your “built” website, which Github pages rebuilds anyways.</p>
+
+<h3 id="cname">CNAME</h3>
+<p>Notice that this file is empty. If you happen to have a custom domain name, you can enter it here (ie mywebsite.com). Once you’ve configured forwarding with your domain host it will set mywebsite.com to show your github page. This comes in handy if you take advantage of the domain hosting discount via the student developer pack!</p>
+
+<h3 id="readmemd-and-license">README.md and LICENSE</h3>
+<p>Both of these files are typically generated by default on Github. <code class="highlighter-rouge">README.md</code> is a markdown formatted file, and any file with this name will display on Github’s repo page. In this case, it isn’t displayed on the actual website, but shows up when viewing your repo. <code class="highlighter-rouge">LICENSE</code> is self-explanatory - this file lists the chosen license for the repository, which controls how your work can be used/shared/distributed.</p>
+
+<h3 id="indexhtml">index.html</h3>
+<p>By default index.html is the first page displayed on the root your website (so going to yourusername.github.io will show this page). For the sample site, this page follows the default layout, includes <code class="highlighter-rouge">header.html</code> and uses Liquid/html to display blog post titles and their links. Feel free to play around with this page. You can add some text with html, include a picture, or for more advanced stuff try adding another list like site.posts such as site.links (in the same manner the posts are pulled).</p>
+
+<h3 id="cvhtml">cv.html</h3>
+<p>Here I’ve written a super simple, html-based cv template. You can fill it in with your info as-is, or tweak the format by modifying the <code class="highlighter-rouge">div class=portfolio</code> in the <code class="highlighter-rouge">/assets/css/main.scss</code> file. You could even re-do this page to just be a link to a pdf of your cv (by editing the cv url in <code class="highlighter-rouge">/_data/navigation.yml</code>). You could even change the file to cv.md and write your cv in markdown format (which is simpler than html).</p>
+
+<p><em>Note: for this theme if you switch your cv to markdown you may need to follow the directory format of the <code class="highlighter-rouge">about</code> page. See below…</em></p>
+
+<h3 id="me">me/</h3>
+<p>Under this directory is a file called <code class="highlighter-rouge">index.md</code>. If you open it you’ll see this is the contents of the <code class="highlighter-rouge">about</code> page, written in markdown format. Revisit the <code class="highlighter-rouge">/_data/navigation.yml</code> document and you’ll notice that the link for <code class="highlighter-rouge">about</code> points to the url <code class="highlighter-rouge">/me</code>. This tells Jekyll to go to that folder, and since the only file within is <code class="highlighter-rouge">index.md</code>, this is the page that is displayed. Edit the contents of <code class="highlighter-rouge">index.md</code> to fit your liking. If you need help with markdown formatting <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here’s a cheat sheet</a> (which includes how to embed video or include a picture).</p>
+
+<h3 id="_configyml">_config.yml</h3>
+<p>This is a powerful, important file for Jekyll that stores your site’s configuration info. You’ll want to edit the <code class="highlighter-rouge">name:</code> and <code class="highlighter-rouge">description:</code> fields for yourself but everything else can stay the same. To see what other things you can configure see <a href="https://jekyllrb.com/docs/configuration/">Jekyll’s guide here</a>.</p>
+
+<h3 id="_posts">_posts/</h3>
+<p>Here’s where you put your blog posts, in markdown format. In this directory you’ll see that I’ve left the original theme owner’s content - have a look at the files to get a sense for the markdown format. Also note the naming convention for the files. Jekyll requires this format in order to build and reference your blog posts. Feel free to create a new file with a new blog post to celebrate the occasion. For more info on blogging see <a href="https://jekyllrb.com/docs/posts/">Jekyll’s guide here</a>.</p>
+
+<p><em>Note: you can create a directory called _drafts to store drafts for your blog post. Since _drafts is in the .gitignore file they will not be visible on Github.</em></p>
+
+<h2 id="if-you-are-working-locally">If you are working locally:</h2>
+<p>Once you are done editing your site files you can preview the changes by entering the following in terminal, while in your site’s main directory:</p>
+
+<p><code class="highlighter-rouge">jekyll serve</code></p>
+
+<p>And as before, copy the server address into your browser. If you like what you see, and you’re ready to push your site to Github we’ll first check git’s configuration, commit changes and push this version to the online repo:</p>
+
+<p>To set your user name:</p>
+
+<p><code class="highlighter-rouge">git config user.name "User Name"</code></p>
+
+<p>OR</p>
+
+<p><code class="highlighter-rouge">git config --global user.name "User Name"</code></p>
+
+<p>The first option sets your user name only for the current directory, the second option sets this for your global user settings (my preferred option).</p>
+
+<p>To confirm this:</p>
+
+<p><code class="highlighter-rouge">git config user.name</code></p>
+
+<p>should return:</p>
+
+<p><code class="highlighter-rouge">User Name</code></p>
+
+<p>Do the same thing with your email address. Ideally the one associate with you Github account:</p>
+
+<p><code class="highlighter-rouge">git config --global user.email "username@example.com"</code></p>
+
+<p>Since we cloned this repo it should be automatically linked to the remote Github address. To verify this enter:</p>
+
+<p><code class="highlighter-rouge">git remote -v</code></p>
+
+<p>This should return something like:</p>
+
+<p><code class="highlighter-rouge">origin	https://github.com/username/username.github.io.git (fetch)</code></p>
+
+<p><code class="highlighter-rouge">origin	https://github.com/username/username.github.io.git (push)</code></p>
+
+<p>If the address is incorrect you can remove ‘origin’ with:</p>
+
+<p><code class="highlighter-rouge">git remote remove origin</code></p>
+
+<p>and then add the correct link to your github.io repo:</p>
+
+<p><code class="highlighter-rouge">git remote add origin https://github.com/username/username.github.io.git</code></p>
+
+<p>Now that we have our git configured, we can commit these changes. A commit is a way of setting a version to your files. Technically any time you make changes to a file you should commit them, in order to track your version control.</p>
+
+<p>First we need to add our directory to git’s staging area. This tutorial won’t go into too much git detail, so I highly suggest checking out the online book <a href="https://git-scm.com/book/en/v2">Pro Git</a>, as it has a simple guide to getting started with git. We’ll add all of the files here:</p>
+
+<p><code class="highlighter-rouge">git add .</code></p>
+
+<p>In the future you should add only the files you’ve changed. For example, if you create a new blog post: <code class="highlighter-rouge">git add newpost.md</code>.</p>
+
+<p>Now we want to commit all of our staged changes:</p>
+
+<p><code class="highlighter-rouge">git commit -m "First commit"</code></p>
+
+<p>Note that -m stands for message. Here we’re making our first commit but for other commits a short, specific message is helpful if you need to backtrack to a specific version of your edits.</p>
+
+<p>Now we’re ready to push these local commits to our “remote origin”, which lives at the Github repo online:</p>
+
+<p><code class="highlighter-rouge">git push origin master</code></p>
+
+<p>Again, I’m leaving out some details here, but essentially we’re pushing the “master” branch (in this case the one and only branch of the project we’re working on) to our online repo.</p>
+
+<p>If everything worked you should be able to visit your repo page on Github and see the changes you’ve made. You should also be able to visit your website (username.github.io) and see your site up in action. Sometimes this can take a minute or two for the Github servers to update.</p>
+
+<h2 id="if-you-are-working-from-github-online">If you are working from Github online:</h2>
+<p>To edit a file simply click on it from your repo page. On the right-hand side you should see a little pencil icon to click in order to open the file editor. In the file editor you can make your changes, and in order to save them you must “commit changes” each time. As previously mentioned, it’s helpful to give a short, descriptive message with your commit so it is easy to return to that version.</p>
+
+<p>In this case you aren’t “launching” your site but rather publishing changes incrementally. <strong>This option works best if you just want to write and publish a new blog post, without working with a draft.</strong> If you have your website on your local disk but make changes directly on Github’s site, just remember to update your local files by “pulling” your updates from the remote repo.</p>
+
+<h2 id="moving-on-with-other-themes">Moving on with other themes</h2>
+<p>This guide uses a very basic, minimalist theme to avoid a lot of the tweaking more design-heavy sites might need. But there are <strong>numerous</strong> themes available for Jekyll (see <a href="http://jekyllthemes.org/">here</a> and <a href="https://jekyllthemes.io/">here</a> for examples). If you’d like to try out a different theme but keep some of your original content the process isn’t as simple as say, changing a wordpress blog theme. However it’s just a matter of copying the right data over to the new theme repo. <a href="http://stackoverflow.com/questions/31327045/switch-theme-in-an-existing-jekyll-installation">Here</a> are some options posted on Stack Exchange that I thought were helpful.</p>
+
+<p>Personally I found it easy enough to make a “practice” website, then just overwrite everything using a new theme and start fresh.</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>I’m still new to Jekyll so if you catch mistakes in this tutorial or have problems do let me know. I think it’s a great exercise on getting started with Github, and is good practice for learning new coding languages on the fly (my last front-end web development experience was making an html site for my favorite pokemon characters, so I’m a bit rusty). I’ve collected all of the links into the section below for easy reference.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li><a href="https://git-scm.com/">Git</a></li>
+  <li><a href="https://github.com/">Github</a></li>
+  <li><a href="https://jekyllrb.com">Jekyll</a></li>
+  <li><a href="https://atom.io">Atom</a>: Github’s friendly text editor.</li>
+  <li><a href="https://jekyllrb.com/docs/structure/">Jekyll file structure</a>: Explains the file structure for using Jekyll.</li>
+  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheatsheet</a>: A handy guide for writing in markdown.</li>
+  <li><a href="https://jekyllrb.com/docs/configuration/">Jekyll _config.yml</a>: Explains the Jekyll config file and what values you might add to it.</li>
+  <li><a href="https://jekyllrb.com/docs/posts/">Jekyll Blogging</a>: Explains how Jekyll handles blog posts.</li>
+  <li><a href="https://git-scm.com/book/en/v2">Pro Git</a>: A great guide for getting started with git. A must-read if you plan on using git in command line.</li>
+  <li><a href="jekyllthemes.org">Jekyll Themes</a>: A nice gallery of (mostly?) free Jekyll Themes.</li>
+  <li><a href="https://jekyllthemes.io/">JekyllThemes.io</a>: A gallery of free as well as premium Jekyll Themes.</li>
+  <li><a href="http://jekyll.tips/">Jekyll.tips</a>: Short, handy video tutorials that cover beginner and advance Jekyll use.</li>
+</ul>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

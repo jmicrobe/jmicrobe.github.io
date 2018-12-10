@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      bacterial community response to land use change in the amazon &middot; jmicrobe
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <script src="https://use.fontawesome.com/b4fd5cd984.js"></script>
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <center><img src="/public/wbunny.png" style="width: 45%;"></center>
+        <a href="/">
+          jmicrobe
+        </a>
+      </h1>
+      <p class="lead">Microbial ecologist, bioinformatician, mad scientist</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">about me</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/cv/">curriculum vitae</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/portfolio/">portfolio</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/posts/">posts</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tutorials/">tutorials</a>
+          
+        
+      
+        
+      
+      <p><center>
+        <a href="https://github.com/jmicrobe"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hardwickejessica"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jessica_microbe"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:jessica@jmicrobe.me"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </p></center>
+    </nav>
+    <p><center><a href="https://github.com/poole/hyde"><i>Powered by Hyde</i></a></center></p>
+    <p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">bacterial community response to land use change in the amazon</h1>
+  <h2 id="objective">Objective</h2>
+
+<p>Understand bacterial taxonomic responses to land use change using samples collected
+at the Amazon Rainforest Metagenomic Observatory. An additional objective was to
+understand the effect of rarefaction on statistical metrics of bacterial diversity.</p>
+
+<h2 id="background">Background</h2>
+
+<p>Data provided was obtained via a nested sampling scheme at each location, repeated
+once per year over three years time. Three location types were compared:</p>
+
+<ul>
+  <li>Pasture (actively used for raising cattle)</li>
+  <li>Primary Rainforest</li>
+  <li>Secondary Rainforest (rainforest that was recently used as cattle pasture but had begun to grow back)</li>
+</ul>
+
+<p>16s rRNA marker DNA was extracted from soil cores and sequenced
+using Roche 454 pyrosequencing technology. This project was a part of a mentored assignment for
+a graduate genomics course.</p>
+
+<h2 id="methods">Methods</h2>
+
+<p>Using the University of Oregon’s ACISS TORQUE server all data was processed within the
+QIIME pipeline, and operations were run in parallel where available. Multiple operational taxonomic
+unit (OTU) tables were generated for comparison, and QIIME was used to create principal
+coordinate plots of this data. The effects of rarefaction were
+analyzed by performing multiple rarefactions at a range of sample depths, calculating
+the respective alpha diversity measure at each sample depth, and visualizing this
+data using R.</p>
+
+<h2 id="results">Results</h2>
+
+<p><img src="/public/images_portfolio/armo_weighteduni.png" alt="" title="Weighted Unifrac PCoA: by land type" />
+The above plot is averaged across all years, and combines samples by the location type. As expected,
+secondary forest points (in blue) show more taxonomic similarity to primary forest (green) than they do
+pasture (red).</p>
+
+<p><img src="/public/images_portfolio/rarefaction.png" alt="" title="Effects of Rarefaction on Alpha Diversity" />
+ The above plot highlights the effect that rarefaction has on measures of alpha diversity. At low sampling
+ depths the pasture samples appear to show more bacterial taxonomic diversity. However as the subsampling
+ depth increases the measure of diversity becomes more similar across land types.</p>
+
+<h2 id="future">Future</h2>
+
+<p>This was my first major foray into 16s rRNA amplicon studies, and with QIIME and it’s many dependencies.
+I became very interested in the idea of rarefaction and how this apparent “tossing out” of
+samples might either be necessary, or altering the outcome of statistical analyses, or both.</p>
+
+<p>In the future I would like to look further into a chronosequence of this data, observing how
+taxonomic patterns change over time. In particular how quickly do the secondary forests “recover”
+to become more like the primary forest taxa? I believe this could be an excellent use for the R web application framework <a href="http://shiny.rstudio.com/">Shiny</a> - to create an interactive, web-based visualization for this data.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

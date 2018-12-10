@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      science hack day portland part II, the hackening &middot; jmicrobe
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <script src="https://use.fontawesome.com/b4fd5cd984.js"></script>
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <center><img src="/public/wbunny.png" style="width: 45%;"></center>
+        <a href="/">
+          jmicrobe
+        </a>
+      </h1>
+      <p class="lead">Microbial ecologist, bioinformatician, mad scientist</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">about me</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/cv/">curriculum vitae</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/portfolio/">portfolio</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/posts/">posts</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tutorials/">tutorials</a>
+          
+        
+      
+        
+      
+      <p><center>
+        <a href="https://github.com/jmicrobe"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hardwickejessica"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jessica_microbe"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:jessica@jmicrobe.me"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </p></center>
+    </nav>
+    <p><center><a href="https://github.com/poole/hyde"><i>Powered by Hyde</i></a></center></p>
+    <p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">science hack day portland part II, the hackening</h1>
+  <span class="post-date">20 Mar 2017</span>
+  <p>This is the second part of my write-up on what it was like organizing and participating in Science Hack Day Portland 2016. As an exciting sidenote and excuse, this is terribly overdue because I recently graduated, got a job, and relocated. More on that later!</p>
+
+<p>Where were we? At the end of the first night things were winding down - our competent yeast cultures and CRISPR bacteria were warming up, the 3D printer was raging on, and I was exhausted. I pitched my tent and went to bed.</p>
+
+<p>Guests slowly started streaming in the following morning, and I helped get our DIY coffee station up and running. Saturday was when the magic happened. Groups started to dig in and bring together their hardware and software ideas. I was taught how to design some 3D printed medals on the fly, and another science hacker (who I later found out was a quilter!) helped sew lanyards to hold them.</p>
+
+<h3 id="heres-where-im-going-to-tell-you-about-the-project-i-worked-on-and-how-it-failed">Here’s where I’m going to tell you about the project I worked on, and how it failed.</h3>
+
+<p>That sounds harsh, but as a scientist I’m really used to failure and it’s not at all a bad thing (particularly in the discovery phase). My first failure was to <strong>pick out something I already do</strong>. While it was nice to work with something familiar to me, and get the chance to teach my team mate about it, I really didn’t get out of my comfort zone. I also <strong>didn’t take advantage of the awesome toys and supplies that were donated</strong>. While everyone else was hacking their raspberrypi I was doing what I do every day at work.</p>
+
+<p>If it’s not obvious, the project I chose was using bioinformatics - more specifically taking open data from <a href="https://genelab.nasa.gov/">NASA Genelab</a> on a 16S rRNA marker gene survey of the indoor microbiome of the International Space Station. With my partner we were interested building some fun, hopefully interactive visualizations using this data. This turned out to be really challenging for one big reason. <strong>Neither of us were familiar enough with the cloud computing resources necessary to work with this data in such a short amount of time</strong>.</p>
+
+<p>This is where I’d like to spin this in a positive direction - my partner and I had a crash course in tools like <a href="https://www.docker.com/">Docker</a>, <a href="https://aws.amazon.com/">AWS</a>, and <a href="https://www.digitalocean.com/">Digital Ocean</a>. That morning we both scrambled between getting AWS configured, to ditching that and getting a hook-up on some credits to spin up a really powerful Digital Ocean drive, and the mess ended with learning how to configure a docker image that contained the bioinformatics program <a href="http://qiime.org/index.html">QIIME</a> along with enough storage to handle the raw 16S dataset from GeneLab.</p>
+
+<p>I’m still a bit new to bioinformatics, but from my experience that day was very similar to the challenges I face with my day-to-day work. I was only half-joking with my previous PI when I said that <strong>90% of bioinformatics use is figuring out how to install programs</strong>.</p>
+
+<p>Anyways the day went on and in between bouts of yelling at my computer screen I walked around to observe and help out other projects. I especially enjoyed being a guinea pig in Jean &amp; Marlene’s project to build a temperature-sensing glove for Reynaud’s syndrome. I stuck my hand in a freezer for 30 minutes FOR SCIENCE!</p>
+
+<center>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ro" dir="ltr">Sensor prototype for Raynaud&#39;s disease monitoring. <a href="https://twitter.com/hashtag/pdxscience?src=hash">#pdxscience</a> <a href="https://twitter.com/science_hackPDX">@science_hackPDX</a> <a href="https://twitter.com/hashtag/openscience?src=hash">#openscience</a> <a href="https://t.co/ALbl84Oa15">pic.twitter.com/ALbl84Oa15</a></p>&mdash; Robin Champieux (@rchampieux) <a href="https://twitter.com/rchampieux/status/784937645805678592">October 9, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+<p>Other fun things included Max showing folks how to develop black &amp; white photographs with vitamin C and coffee, a pipette-ejecting contest, a Hack Oregon confetti cannon, an LED lamp that projects a rainbow double helix and even pumpkins that light up LEDs when you touch them. <strong>It was freaking amazing</strong>.</p>
+
+<h3 id="and-now-for-a-bit-of-reflection">And now for a bit of reflection</h3>
+
+<p>I learned so much from Science Hack Day - about my community &amp; local scientists, about the logistics of organizing such an event, and a lot more about cloud computing. One thing I hope to see at the next Science Hack Day is more prep and even infrastructure geared toward data science with large data sets. Some of the Portland organizers are already pushing for this - and recently hosted an <a href="http://opendataday.org/">Open Data Day</a> complete with tutorials on metadata and web scraping to accompany the event. We are also already in the planning stages for Science Hack Day Portland 2017, and are working towards more smaller events leading up to it.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/01/01/science-hack-day1/">
+            science hack day portland part I
+            <small>01 Jan 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/08/09/data-visualization/">
+            on data presentation & visualization
+            <small>09 Aug 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/06/02/awesome-fonts/">
+            awesome fonts
+            <small>02 Jun 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,37 +1,331 @@
----
-layout: default
-title: home
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-<div class="posts">
-  {% for post in paginator.posts %}
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      home &middot; jmicrobe
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <script src="https://use.fontawesome.com/b4fd5cd984.js"></script>
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <center><img src="/public/wbunny.png" style="width: 45%;"></center>
+        <a href="/">
+          jmicrobe
+        </a>
+      </h1>
+      <p class="lead">Microbial ecologist, bioinformatician, mad scientist</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">about me</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/cv/">curriculum vitae</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/portfolio/">portfolio</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/posts/">posts</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tutorials/">tutorials</a>
+          
+        
+      
+        
+      
+      <p><center>
+        <a href="https://github.com/jmicrobe"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hardwickejessica"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jessica_microbe"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:jessica@jmicrobe.me"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </p></center>
+    </nav>
+    <p><center><a href="https://github.com/poole/hyde"><i>Powered by Hyde</i></a></center></p>
+    <p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
+      <a href="/2017/03/20/science-hack-day2/">
+        science hack day portland part II, the hackening
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">20 Mar 2017</span>
 
-    {{ post.content }}
+    <p>This is the second part of my write-up on what it was like organizing and participating in Science Hack Day Portland 2016. As an exciting sidenote and excuse, this is terribly overdue because I recently graduated, got a job, and relocated. More on that later!</p>
+
+<p>Where were we? At the end of the first night things were winding down - our competent yeast cultures and CRISPR bacteria were warming up, the 3D printer was raging on, and I was exhausted. I pitched my tent and went to bed.</p>
+
+<p>Guests slowly started streaming in the following morning, and I helped get our DIY coffee station up and running. Saturday was when the magic happened. Groups started to dig in and bring together their hardware and software ideas. I was taught how to design some 3D printed medals on the fly, and another science hacker (who I later found out was a quilter!) helped sew lanyards to hold them.</p>
+
+<h3 id="heres-where-im-going-to-tell-you-about-the-project-i-worked-on-and-how-it-failed">Here’s where I’m going to tell you about the project I worked on, and how it failed.</h3>
+
+<p>That sounds harsh, but as a scientist I’m really used to failure and it’s not at all a bad thing (particularly in the discovery phase). My first failure was to <strong>pick out something I already do</strong>. While it was nice to work with something familiar to me, and get the chance to teach my team mate about it, I really didn’t get out of my comfort zone. I also <strong>didn’t take advantage of the awesome toys and supplies that were donated</strong>. While everyone else was hacking their raspberrypi I was doing what I do every day at work.</p>
+
+<p>If it’s not obvious, the project I chose was using bioinformatics - more specifically taking open data from <a href="https://genelab.nasa.gov/">NASA Genelab</a> on a 16S rRNA marker gene survey of the indoor microbiome of the International Space Station. With my partner we were interested building some fun, hopefully interactive visualizations using this data. This turned out to be really challenging for one big reason. <strong>Neither of us were familiar enough with the cloud computing resources necessary to work with this data in such a short amount of time</strong>.</p>
+
+<p>This is where I’d like to spin this in a positive direction - my partner and I had a crash course in tools like <a href="https://www.docker.com/">Docker</a>, <a href="https://aws.amazon.com/">AWS</a>, and <a href="https://www.digitalocean.com/">Digital Ocean</a>. That morning we both scrambled between getting AWS configured, to ditching that and getting a hook-up on some credits to spin up a really powerful Digital Ocean drive, and the mess ended with learning how to configure a docker image that contained the bioinformatics program <a href="http://qiime.org/index.html">QIIME</a> along with enough storage to handle the raw 16S dataset from GeneLab.</p>
+
+<p>I’m still a bit new to bioinformatics, but from my experience that day was very similar to the challenges I face with my day-to-day work. I was only half-joking with my previous PI when I said that <strong>90% of bioinformatics use is figuring out how to install programs</strong>.</p>
+
+<p>Anyways the day went on and in between bouts of yelling at my computer screen I walked around to observe and help out other projects. I especially enjoyed being a guinea pig in Jean &amp; Marlene’s project to build a temperature-sensing glove for Reynaud’s syndrome. I stuck my hand in a freezer for 30 minutes FOR SCIENCE!</p>
+
+<center>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ro" dir="ltr">Sensor prototype for Raynaud&#39;s disease monitoring. <a href="https://twitter.com/hashtag/pdxscience?src=hash">#pdxscience</a> <a href="https://twitter.com/science_hackPDX">@science_hackPDX</a> <a href="https://twitter.com/hashtag/openscience?src=hash">#openscience</a> <a href="https://t.co/ALbl84Oa15">pic.twitter.com/ALbl84Oa15</a></p>&mdash; Robin Champieux (@rchampieux) <a href="https://twitter.com/rchampieux/status/784937645805678592">October 9, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+<p>Other fun things included Max showing folks how to develop black &amp; white photographs with vitamin C and coffee, a pipette-ejecting contest, a Hack Oregon confetti cannon, an LED lamp that projects a rainbow double helix and even pumpkins that light up LEDs when you touch them. <strong>It was freaking amazing</strong>.</p>
+
+<h3 id="and-now-for-a-bit-of-reflection">And now for a bit of reflection</h3>
+
+<p>I learned so much from Science Hack Day - about my community &amp; local scientists, about the logistics of organizing such an event, and a lot more about cloud computing. One thing I hope to see at the next Science Hack Day is more prep and even infrastructure geared toward data science with large data sets. Some of the Portland organizers are already pushing for this - and recently hosted an <a href="http://opendataday.org/">Open Data Day</a> complete with tutorials on metadata and web scraping to accompany the event. We are also already in the planning stages for Science Hack Day Portland 2017, and are working towards more smaller events leading up to it.</p>
+
   </div>
-  {% endfor %}
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/01/01/science-hack-day1/">
+        science hack day portland part I
+      </a>
+    </h1>
+
+    <span class="post-date">01 Jan 2017</span>
+
+    <p>Back in July of 2016 I joined up with some folks who were organizing the first <a href="http://sciencehackday.org/">Science Hack Day</a> in Portland, Oregon. If you’re not familiar, Science Hack Day is a 24-hour (or sometimes weekend-long) event where people come together to make cool things with science. Cities worldwide have hosted their own Science Hack Days, all with the support of local volunteers and donors. One of the best things is that the event is free, and provides meals and supplies for the participants. Each city has it’s own flavor, but typically there’s a mix of scientists, hardware &amp; software engineers, students, children, and other nerds.</p>
+
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/17626538/21598605/4aa262b0-d114-11e6-9532-06f9f8fe2111.jpg" />
+</p>
+
+<p>I won’t spend much time talking about background stuff but let me tell you - organizing an event like this was incredibly fun for me. I met a lot of new people, and enjoyed the challenge of working with a team (of really great nerds!) to figure out all of the outreach, logistics, and fundraising that needed to be done. Leading up to the event we had two meet &amp; greets, along with online introductions on our Slack channel - and our community started to self-assemble.</p>
+
+<p>I’m not sure if I read this somewhere, or someone suggested it to me but around the time I was an undergrad my mantra became “Don’t think, just sign up for stuff and do it”. For a kid who grew up shy, this has worked out well for me. So naturally I volunteered to be the first speaker for the lightening talks that night. My job was to introduce everyone to Science Hack Day, how it would work, what to expect, and basically be the hype-person. I chose to channel my childhood inspiration: Ms. Frizzle.</p>
+
+<center><iframe src="https://docs.google.com/presentation/d/1x0X5kCx7_HPVbWFduVm0tThZFx9gSkk5ivy3NqVdlZU/embed?start=false&amp;loop=false&amp;delayms=5000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></center>
+
+<p>Maybe this is just coming from someone in academia, but I would have loved a whole day of just talks from our guests. The event was conveniently nestled between the <a href="http://2016.oshwa.org/">2016 Open Hardware Summit</a> and the <a href="http://www.hackoregon.org/">Hack Oregon</a> Donut Sunday Summit, so we were fortunate to have guests and speakers from those events in attendance. <a href="https://twitter.com/jenny_molloy">Dr. Jenny Molloy</a> gave a really exciting talk about open science and science hardware. I learned a ton about open hardware from <a href="https://twitter.com/pdp7">Drew Fustini</a>. <a href="https://twitter.com/dietrich">Dietrich Ayala</a> got us all passionate about the open internet and <a href="https://twitter.com/cat_nikolovski">Cat Nikolovski</a> introduced us to <a href="http://www.hackoregon.org/">Hack Oregon</a> - an amazing nonprofit group building open data projects.</p>
+
+<p>When the talks were over we turned on the music, set up our beer and kombucha bar, put snacks out and started to mingle. <a href="https://twitter.com/alexchally">Alex Chally</a> fired up the 3D printers he had brought, and Dr. Molloy got to work with his help to print a 3D microscope.</p>
+
+<center><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">we&#39;re 3D printing a microscope overnight tonight <a href="https://t.co/issecBaj37">pic.twitter.com/issecBaj37</a></p>&mdash; ScienceHackDayPDX (@science_hackPDX) <a href="https://twitter.com/science_hackPDX/status/784663047092580352">October 8, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+
+<p><a href="https://twitter.com/hydronics">Thomas Hudson</a> had the mood lighting covered after he set up the Internet of Buckets. He showed a group of folks how to program the bucket colors, which were conveniently capable of 23 hues - the same number of amino acids used by humans! Soon the Internet of Buckets was stealthily streaming the amino acid sequence for the protein known as p53 - an important player in cancer suppression.</p>
+
+<center><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">p53 is a tumor suppression gene. One of our <a href="https://twitter.com/science_hackPDX">@science_hackPDX</a> teams  used the Internet of Buckets to visualize its expression. Seriously!!!! <a href="https://t.co/PDsnW1aYhm">pic.twitter.com/PDsnW1aYhm</a></p>&mdash; Robin Champieux (@rchampieux) <a href="https://twitter.com/rchampieux/status/784991482272808960">October 9, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+
+<p>I was most excited by the two kits we purchased from <a href="http://www.the-odin.com/">The Odin</a> - a DIY CRISPR kit and a DIY fluorescent yeast kit. Working with another organizer (now Dr.!) <a href="https://twitter.com/daniellecrobins">Danielle Robinson</a> I helped teach someone who’d never used a pipette before to perform a CRISPR transformation on e. coli!</p>
+
+<center><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">green fluorescent protein and crispr bio hacking is happening!! <a href="https://t.co/z5Ejexmdtz">pic.twitter.com/z5Ejexmdtz</a></p>&mdash; ScienceHackDayPDX (@science_hackPDX) <a href="https://twitter.com/science_hackPDX/status/784662955270868993">October 8, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+
+<p>As the night wound down, and the microbes were put to bed (atop of the 3D printer as a makeshift incubator), I pitched my tent and played camp counselor while about 5 or so others hunkered down for the night…and the rest I’ll continue in another post.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/08/09/data-visualization/">
+        on data presentation & visualization
+      </a>
+    </h1>
+
+    <span class="post-date">09 Aug 2016</span>
+
+    <p>I recently attended a workshop by <a href="https://www.edwardtufte.com/tufte/index">Edward Tufte</a>, a very well-known statistician, author, and data scientist. If you haven’t seen his books they are quite inspiring and frankly gorgeous to look at and explore. The workshop was focused on data presentation and visualization. I’d like to share some of my musings on the subject, from a bioinformatics perspective…</p>
+
+<h2 id="presenting-data">Presenting data</h2>
+<hr />
+<p>There are a lot of questions you need to answer when you’re preparing to present scientific data. Who is your audience? How much time do you have? What kind of media do you have to work with? What message are you trying to convey with the data?</p>
+
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/17626538/17566500/7b75f708-5ef0-11e6-96ba-54881b5d2bfe.gif" />
+</p>
+
+<p>Edward Tufte is an outspoken opponent of the PowerPoint format, and the examples he gives in his books (namely <em>Beautiful Evidence</em>) are sound. If the data you present to your audience is going to be used to help them make a judgement on say, safety procedures regarding the impact of damage from errant debris on a space shuttle - a PowerPoint pitch is terrible.</p>
+
+<p>However, in academia I’d argue that a <em>pitch</em> is the best way to present research at a conference, and it should be treated as such. I was recently at the <a href="http://wsrpacificnorthwest.com/">Pacific Northwest Women in Science Retreat</a> and learned a lot about taking lessons from actors and translating them to presenting data (<a href="http://www.nancyhoufek.com/index.shtml">thanks Nancy Houfek!</a>). One thing that really stuck with me is the importance of <strong>telling a story</strong> when you present. I realized that the most memorable presentations I’ve seen are ones where it feels more like the presenter is sharing a story of their work, rather than reading off details of their experiment. This kind of brings me back to a quote from Tufte: <em>“No matter how beautiful your interface is it would be better if there were less of it”</em>. For a talk, less details are better. A good talk should leave the audience with lots of questions - questions that can be answered in reading the paper on the study, or viewing the poster, or talking to the researchers.</p>
+
+<h2 id="visualizing-data">Visualizing data</h2>
+<hr />
+<p>Depending on the mode of presentation, your visualizations may be different. Tufte presents a few principles of visualizing data that I think are important.</p>
+
+<h3 id="get-rid-of-chartjunk"><strong>Get rid of chartjunk</strong></h3>
+
+<p>Chartjunk is just what it sounds like, clutter on a data visualization. I’d like to think this is largely a thing of the past - from the days when flashy software for data visualization was first introduced. Just because you <em>can</em> make your pie chart look like an actual pie doesn’t mean you <em>should</em>. Actually if you’re going to use a pie chart you might as well…</p>
+
+<p>One of my favorite terrible chart examples provided by Tufte in <em>The Visual Display of Quantitative Information</em> is this piece of work from the 1970’s that somehow tries to illustrate college enrollment by age group.</p>
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/17626538/17579280/1aa31908-5f48-11e6-999b-d9e4eef29de2.png" />
+</p>
+
+<p>You know if you turn it on it’s side it almost looks like one of those vase/face illusion graphics…</p>
+
+<p>Additionally, chartjunk reminds me of the book <em>The Design of Everyday Things</em> by Donald Norman. This book is a classic that most material designers read, but I think it easily translates to the design of everyday <em>data</em> things. The central idea Norman presents is of <em>user-oriented design</em> and the book explores ways in which design can be improved to optimize the use of an object by the user. My favorite example of this is a “Norman door”. If you’ve ever encountered a push/pull door that isn’t intuitively designed, in a way that has cause you (the user) frustration in discovering how to operate it…that’s essentially a Norman door. This video from Vox is a great discussion on the subject.</p>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yY96hTb8WgI" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
+<p>Back to data. We don’t typically <em>operate</em> data like we would a door, or a teapot (well unless you’re making a <a href="http://shiny.rstudio.com/">Shiny visualization with R</a>) - but we do interact with it. <a href="http://dataremixed.com/2016/04/the-design-of-everyday-visualizations/">This post over at Dataremixed.com</a> highlights how data visualization can borrow from Norman’s ideas about user-oriented design. Namely that:</p>
+
+<ol>
+  <li><strong>Good visualizations are discoverable and understandable</strong></li>
+</ol>
+
+<p>Something I’m sure Tufte would agree upon. Tufte encourages you to trust the intelligence of your audience and let them explore your data. Using Norman’s principles you can make this work by designing your visualization in such a way that your viewer doesn’t need a guide to understand how to read the data.</p>
+
+<ol>
+  <li><strong>Absolute precision isn’t always necessary</strong></li>
+</ol>
+
+<p>This goes back to data presentation. In academia, there’s a certain hierarchy that should be followed - with higher precision expected in something such as a report or print article. If you’re pitching your research at a conference it may be a good idea to sacrifice precision for better readability.</p>
+
+<h3 id="minimize-data-ink"><strong>Minimize data ink</strong></h3>
+
+<p>Along the lines of chartjunk Tufte introduces the concept of the “data-ink ratio”. Essentially the best data-ink ratio is one where all of the ink in an image represents only useful data. While some of Tufte’s suggestions feel like extreme minimalism, I thought this example from <a href="http://www.infovis-wiki.net/index.php/Data-Ink_Ratio">Info-Viz Wiki</a> highlight’s this concept well:</p>
+
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/17626538/17597060/1959ed68-5fa9-11e6-95d1-61d65d408942.png" />
+The plot above has a low data-ink ratio and contains unnecessary lines and shading that detract from the data.
+
+<img src="https://cloud.githubusercontent.com/assets/17626538/17597062/1b4ab954-5fa9-11e6-88f8-7680b4fafbb7.png" />
+</p>
+
+<p>The plot above has a high data-ink ratio, and minimizes the amount of visual distraction in the figure. I really like the horizontal lines within the bars that make it easy to read and compare percentages across the figure.</p>
+
+<h2 id="data-visualization-tools">Data visualization Tools</h2>
+<hr />
+<p>Over the past year I’ve been learning how to analyze data using the <a href="https://www.r-project.org/">programing language R</a>. It’s hard to say what my favorite thing about R is…that it’s open source? That there’s an <a href="https://www.rstudio.com/">excellent graphical user interface</a>? That there is an active community of developers on a plethora of packages?</p>
+
+<p>One of my favorite packages in R is ggplot2, and the slew of other data manipulation packages from <a href="http://hadley.nz/">Hadley Wickham</a>. In my (humble) opinion ggplot2 improves upon the base graphics in R, but more importantly for me it has been easier to write understandable code to produce my figures. If you need convincing, <a href="https://github.com/hadley/ggplot2/wiki/Why-use-ggplot2">read this list</a> on why you should use ggplot2.I should probably do an entire write-up on using ggplot2 with bioinformatics data, but for now I’ll just share a few links to things I found helpful:</p>
+
+<ul>
+  <li><a href="http://swirlstats.com/">Swirl</a>: The <strong>best</strong> way to get acquainted with RStudio. Swirl is a package that teaches you R, in RStudio. It’s amazing. Seriously.</li>
+  <li><a href="https://blogs.uoregon.edu/rclub/">RClub at University of Oregon</a>: Going to their workshops not only improved my data wrangling skills but the folks who run RClub are a great resource.</li>
+  <li><a href="http://colorbrewer2.org/">Colorbrewer2</a>: This is a GREAT tool for picking colors to use with ggplot2 graphics. It includes color picking to accommodate color blindness, something really important to consider when creating data visualizations.</li>
+  <li><a href="http://www.cookbook-r.com/">Cookbook for R</a>: I used this site nearly every day when I took my first class that used R.</li>
+  <li><a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">Cowplot</a>: I often use this package with ggplot2 to create publication-ready graphics. The plot_grid() function makes it easy to combine plots on a gride.</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/06/02/awesome-fonts/">
+        awesome fonts
+      </a>
+    </h1>
+
+    <span class="post-date">02 Jun 2016</span>
+
+    <p>I spent a good chunk of time recently playing around with icons in <a href="https://www.gimp.org/">GIMP</a> with the intent of making some nicely customized buttons for the navbar on this site. I actually enjoy (and miss) graphic design projects, so this was fun (but frustrating)…</p>
+
+<p>But do I feel pretty silly now that I know about little more about how to use CSS, and this awesome site <a href="http://fontawesome.io/">fontawesome.io</a>. Besides the fact that fonts are completely scaleable and I don’t have a good grasp on making vector images, <strong>fontawesome</strong> is just…awesome. Free, no java needed, accessible for screen readers…the list goes on. It’s a simple, super handy website. Now my navbar has nice button-like links to my various social media contacts.
+I <i class="fa fa-heart" aria-hidden="true"></i> fontawesome.</p>
+
+<center>
+<i class="fa fa-coffee" aria-hidden="true"></i> <i class="fa fa-steam-square" aria-hidden="true"></i> <i class="fa fa-reddit-square" aria-hidden="true"></i> <i class="fa fa-share-alt-square" aria-hidden="true"></i> <i class="fa fa-rebel" aria-hidden="true"></i> <i class="fa fa-scissors" aria-hidden="true"></i> <i class="fa fa-spinner fa-spin fa-fw"></i>
+<span class="sr-only">Loading...</span>
+</center>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/05/20/getting-started/">
+        getting started with this site
+      </a>
+    </h1>
+
+    <span class="post-date">20 May 2016</span>
+
+    <p>This post marks the start of my transition to using the <a href="https://jekyllrb.com/">Jekyll</a> static site builder, attached to my <a href="https://github.com/jmicrobe">github</a> profile. In the past I was using weebly to host my <a href="http://jessicamicrobe.weebly.com/">personal site and resume</a>, mostly because I was too busy learning more about coding with genetic information to be bothered with the awesome challenge of website design. I’m looking forward to sharpening my skills in front-end web development (on the side, of course) and I hope to share some of what I learn on this blog. I’m also an adventurous baker, food fermenter and composter so these things may pop up from time to time.</p>
+
+  </div>
+  
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
+  
     <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
+  
+  
     <span class="pagination-item newer">Newer</span>
-  {% endif %}
+  
 </div>
+
+    </div>
+
+  </body>
+</html>
